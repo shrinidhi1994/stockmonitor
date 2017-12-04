@@ -1,37 +1,64 @@
-## Welcome to GitHub Pages
+##  Real Time Stock Monitor 
+### using PIC32 and ESP8266
 
-You can use the [editor on GitHub](https://github.com/shrinidhi1994/stockmonitor/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+### David Valley (drv34) | Saelig Khattar (sak283) | Shrinidhi Kulkarni (ssk285) 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+# Introduction
+Intro
 
-### Markdown
+Motivation
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+# High Level Design
+## Overview 
 
-```markdown
-Syntax highlighted code block
+## Patents and Legal
 
-# Header 1
-## Header 2
-### Header 3
+## Hardware and Software Tradeoffs 
 
-- Bulleted
-- List
+# Hardware Design 
 
-1. Numbered
-2. List
+Circuit - Pictures, schematics 
+Keyboard with port expander 
+ESP8266 Connections 
+LEDs for controlling maybe?  (try and do it today)
+Components, calibrations (hardware)
 
-**Bold** and _Italic_ and `Code` text
+# Software Design 
 
-[Link](url) and ![Image](src)
-```
+## Logic, Wifi and UART protocol info 
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## Protothreads and Wi-Fi 
 
-### Jekyll Themes
+## Calibration and configuration 
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/shrinidhi1994/stockmonitor/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+System Architecture 
+- Program flow 
+- Python Client 
+- Reasons to use 
+- Structure and function
+# Results 
+## Data 
+Pictures 
 
-### Support or Contact
+## Testing 
+Issues with UART errors 
+API Call Issues 
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+# Extensions
+
+Proof of concept 
+Extensibility 
+Other sensors and add ons 
+
+# Conclusion
+
+# References
+Python libraries
+Stock APIs
+# Appendixes 
+
+ESP Documentation 
+UART documentation for PIC32
+PIC Code
+Python Code 
+
