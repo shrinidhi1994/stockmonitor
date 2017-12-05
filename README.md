@@ -4,23 +4,27 @@
 ### David Valley (drv34) | Saelig Khattar (sak283) | Shrinidhi Kulkarni (ssk285) 
 
 # Introduction
-Intro
+In this project, we demonstrate a real-time stock monitor that uses the popular ESP8266 Wi-Fi module controlled by a PIC32.
 
-Motivation
+We decided to build a fun device that fetches chosen stock prices in real-time and displays them on a screen. The goal was driven by a desire to create a PIC32 system that connects to the internet and can work as a server/client to perform several functions and eventually serve as a central home hub. The system can be easily modified to fetch any kind of data from the internet and display it as long as there is an API for it. 
 
 # High Level Design
-## Overview 
-
-## Patents and Legal
+## Rationale
+The rationale behind this project was that there exists almost no library or application of the PIC32 using the ESP8266. Both the chips individually are highly capable, cheap and can be used for even large scale manufacture. We wanted to create a prototype PIC32 system that has internet connectivity and can be easily extended to perform a multitude of things. Using protothreads for this makes this system only much more capable since this threading library is lightweight and makes it easy for anyone to use the PIC32. 
 
 ## Hardware and Software Tradeoffs 
+In order to use the keyboard without rewriting most of the config file, we had to use the port expander. The alternative was to use the small board and rewrite the keyboard code. A software tradeoff []
+
+## System Design
+The system works as a TCP server that connects to a Python Client and fetches real-time stock information for whichever company the user inputs. The input is a 12-digit keypad which works similar to a cellphone keyboard. The user can input the stock symbol of the company required and the system displays the stock price on the LCD monitor along with the corresponding arrows for increase / decrease in stock price relative to the last fetch. This price is updated in real-time.
+
+![program-flow](/images/flow.png)
 
 # Hardware Design 
 
 Circuit - Pictures, schematics 
 Keyboard with port expander 
 ESP8266 Connections 
-LEDs for controlling maybe?  (try and do it today)
 Components, calibrations (hardware)
 
 # Software Design
