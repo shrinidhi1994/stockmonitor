@@ -73,6 +73,9 @@ The ESP communicated with our Python Client via a socket connection. The client 
 
 ## Communication from Python Client to Intrinio Web API
 Our Python client communicated with the Intrinio Web API using HTTP GET Requests. Based on the command it received from the ESP, the client would make the necessary GET request, format the response, and send it back to the ESP module. The GET requests were formatted based on the API requirements, and contained our API key . On an API call, Intrinio returned a JSON string with the necessary information. The client then parsed this JSON string to get the stock price. 
+
+![send-flow](/images/send-flow.png)
+![receive-flow](/images/receive-flow.png)
  
 ## Threads
 ### Keyboard Thread
@@ -178,7 +181,6 @@ PIC32MX250F128B|$5
 TFT LCD|$10
 Keypad|$6
 30 jumper cables $0.10 each|$3
-------------------------|---------------------
 TOTAL|$52.95
 
 ## Appendix E: Work Distribution
@@ -207,7 +209,7 @@ Added error handling for faulty or broken API Calls ||
 
 [Port Expander Reference Code (Additionally printLine2() is used from this code)](http://people.ece.cornell.edu/land/courses/ece4760/PIC32/Target_board/TFT_KEY_expander_shift_BRL4.c)
 
-Used some sample code for UART communication available under section “[Serial Console, Port Expander, DAC/DDS, TFT]” (http://people.ece.cornell.edu/land/courses/ece4760/PIC32/target_board.html)
+Used some sample code for UART communication available under section [Serial Console, Port Expander, DAC/DDS, TFT](http://people.ece.cornell.edu/land/courses/ece4760/PIC32/target_board.html)
 
 [Python Sockets](https://docs.python.org/2/howto/sockets.html)
 
