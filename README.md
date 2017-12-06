@@ -1,7 +1,7 @@
-<h1> <center> Real Time Stock Monitor </center>  </h1>
- <h3> using PIC32 and ESP8266 </h3>
+ <h1> <center> Real Time Stock Monitor </center>  </h1>
+ <h3> <center>using PIC32 and ESP8266 </center></h3>
 
-### David Valley (drv34) | Saelig Khattar (sak283) | Shrinidhi Kulkarni (ssk285) 
+#### David Valley (drv34) | Saelig Khattar (sak283) | Shrinidhi Kulkarni (ssk285) 
 
 # Introduction
 In this project, we demonstrate a real-time stock monitor that uses the popular ESP8266 Wi-Fi module controlled by a PIC32.
@@ -22,8 +22,8 @@ The system works as a TCP server that connects to a Python Client and fetches re
 
 # Hardware Design 
 
-![schematic](/images/schematic.png)
-![ESP-8266](/images/esp.jpg)
+![schematic](/images/schematic.png =600x400)
+![ESP-8266](/images/esp.jpg =480x480)
 
 # Software Design
 
@@ -108,11 +108,11 @@ We pivoted a few times in the course of designing our final project, and finishe
 
 As to the actual technical details of our system, we finished with a pretty reliable framework for making api calls to financial data servers. The latency for a call was roughly one second, and the stock prices updated every ten seconds (manually set to avoid spamming API and reaching the daily call limit), provided we left the PIC running without requesting a different stock quote. Initial configuration of the chip takes about two seconds, meaning we finished with a system with relatively small startup costs, and which makes quick and accurate updates in real time. Additionally, we reported stock prices to two decimal points accuracy.
 
-![idle](images/idle.jpg)
-![wait](images/wait.jpg)
-![price-change1](images/price-change1.JPG)
-![price-change2](images/price-change2.JPG)
-![price-change3](images/price-change3.JPG)
+![idle](images/idle.jpg =600x400)
+![wait](images/wait.jpg =600x400)
+![price-change1](images/price-change1.JPG =600x400)
+![price-change2](images/price-change2.JPG =600x400)
+![price-change3](images/price-change3.JPG =600x400)
 
 
 # Extensions
@@ -141,7 +141,8 @@ _“5. To improve the understanding by individuals and society of the capabiliti
 _7. To seek, accept, and offer honest criticism of technical work, to acknowledge and correct errors, and to credit properly the contributions of others;”_
 
 In specific reference to our own project, and in fact to many of the projects in the class, consideration of these two points is of the utmost importance, and perhaps the most relevant. A “smart hub” capable of tracking and keeping real time updates of financial data is very useful in many applications today, and many extensions to our project have the potential to extend our understanding of conventional and emerging technologies. A growing trend today is the development of ‘smart’ devices that are increasingly interconnected,  allowing us to create and spread new information at alarmingly high rates. Our project and subsequently this report is an investigation into the feasibility, usability, and versatility of wifi connected devices and applications using wireless communication. Addressing the second point listed above, we feel that above all else, the nature of this course is concisely described by point seven in the code. Being a purely lab/project based class, it is no surprise that we seek, accept, and offer criticism in nearly every part of the course. We look for solutions to problems by asking instructors, TAs, other lab groups, online references, and more, and constantly work to refine our designs using information learned from these resources. Crediting the work of others is stressed in every part of the course, especially in the final project where it is usually up to us to find outside material to inform our decision making and code design. In this way we maintain the IEEE’s standards and Code of Ethics, with special attention paid to points 5 and 7 of the code.
-___
+
+***
 # Appendices 
 ## Appendix A
 _The group approves this report for inclusion on the course website_
@@ -174,8 +175,8 @@ TOTAL|$52.95
 
 Saelig Khattar | David Valley | Shrinidhi Kulkarni
 ---------------|--------------|--------------------
-Helped get ESP Wifi-module setup | Implemented Port Expander for keypad thread | Setup and configuration of the ESP module (which was basically reading the entire manual for the ESP chip)|Setup the communication protocol between the ESP and the python client and tested it
-Helped Interface ESP chip with PIC32 chip (including the many tens of hours debugging)| Modified debouncing logic to scan new keypad and update ticker symbols|Tested communication extensively between the ESP and the Python client
+Helped get ESP Wifi-module setup | Implemented Port Expander for keypad thread | Setup and configuration of the ESP module (which was basically reading the entire manual for the ESP chip)
+Helped Interface ESP chip with PIC32 chip (including the many tens of hours debugging)| Modified debouncing logic to scan new keypad and update ticker symbols|Setup the communication protocol between the ESP and the python client and tested it 
 Helped write Python script to make API calls and communicate with ESP module | Helped with hardware setup and wiring|Wrote the original python test script
 Solved inability to read stock related responses from ESP | Helped identify Intrinio as our goto API data server, and how to format JSON calls | Integrated the keyboard and wifi communication threads on the PIC 
 Designed the UI | Helped with UI design | Debugged minor issues during integration 
