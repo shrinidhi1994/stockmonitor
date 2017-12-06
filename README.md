@@ -1,7 +1,8 @@
  <h1> <center> Real Time Stock Monitor </center>  </h1>
  <h3> <center>using PIC32 and ESP8266 </center></h3>
 
-#### David Valley (drv34) | Saelig Khattar (sak283) | Shrinidhi Kulkarni (ssk285) 
+
+<h4> <center> David Valley (drv34) | Saelig Khattar (sak283) | Shrinidhi Kulkarni (ssk285) </center></h4>
 
 # Introduction
 In this project, we demonstrate a real-time stock monitor that uses the popular ESP8266 Wi-Fi module controlled by a PIC32.
@@ -21,11 +22,15 @@ The system works as a TCP server that connects to a Python Client and fetches re
 ![program-flow](/images/flow_overview.png)
 
 # Hardware Design 
+The hardware schematic for this project is shown in Fig. 2. The ESP module is connected to the PIC32 via the RX and TX lines. The chip also has +Vcc and GND, and the EN and CS pins that need to be connected to +Vcc to enable the chip and communicate. 
 
-<img src="/images/schematic.png" width="250">
-<img src="/images/esp.jpg" width="250">
+<center>
+<img src="stockmonitor/images/schematic.png" width="250"></img>
+<img src="stockmonitor/images/esp.jpg" width="250"></img>
+</center>
 
 # Software Design
+
 
 ## ESP8266 Wifi Module Setup
 
