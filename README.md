@@ -1,7 +1,7 @@
  <h1> <center> Real Time Stock Monitor </center>  </h1>
  <h3> <center>using PIC32 and ESP8266 </center></h3>
 
-<h4> <center> David Valley (drv34) \cdot Saelig Khattar (sak283) \cdot Shrinidhi Kulkarni (ssk285) </center></h4>
+<h4> <center> David Valley (drv34) ~ Saelig Khattar (sak283) ~ Shrinidhi Kulkarni (ssk285) </center></h4>
 
 # Introduction
 In this project, we demonstrate a real-time stock monitor that uses the popular ESP8266 Wi-Fi module controlled by a PIC32.
