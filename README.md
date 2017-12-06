@@ -25,11 +25,11 @@ The hardware schematic for this project is shown in Fig. 2. The ESP module is co
 
 The keyboard uses the MCP23017 port expander chip which gives the PIC 16 additional I/O pins. The keyboard is hooked up to the board as shown in the schematic. We use 330 ohm resistors to limit the current. The hardware setup was simple and did not take very long. We had a couple of mis-connections, but we fixed them early on. 
 <center>
-<img src="stockmonitor/images/schematic.png" width="250"></img>
+<img src="stockmonitor/images/schematic.png" width="250">
 
 ## ESP 8266 
 The ESP 8266 is a highly-capable, self contained SOC with integrated TCP/IP protocol stack that can give any microcontroller access to your WiFi network. It can be interfaced with almost any microcontroller and works at a baud rate of 115200 bps. It costs only about 7$ and in fact, has an onboard microcontroller with 2 GPIO pins. It contains a self-calibrated RF allowing it to work under all operating conditions, and requires no external RF parts. It is capable of hosting a TCP server or act as a client. Here, in our project, we use it as a TCP server. It can be configured easily using "AT" commands which are quite verbose and easy to understand. The documentation has been listed in the appendix. 
-<img src="stockmonitor/images/esp.jpg" width="250"></img>
+<img src="stockmonitor/images/esp.jpg" width="250">
 </center>
 
 # Software Design
@@ -117,11 +117,11 @@ We pivoted a few times in the course of designing our final project, and finishe
 
 As to the actual technical details of our system, we finished with a pretty reliable framework for making api calls to financial data servers. The latency for a call was roughly one second, and the stock prices updated every ten seconds (manually set to avoid spamming API and reaching the daily call limit), provided we left the PIC running without requesting a different stock quote. Initial configuration of the chip takes about two seconds, meaning we finished with a system with relatively small startup costs, and which makes quick and accurate updates in real time. Additionally, we reported stock prices to two decimal points accuracy.
 
-![idle](images/idle.jpg =600x400)
-![wait](images/wait.jpg =600x400)
-![price-change1](images/price-change1.JPG =600x400)
-![price-change2](images/price-change2.JPG =600x400)
-![price-change3](images/price-change3.JPG =600x400)
+![idle](images/idle.jpg)
+![wait](images/wait.jpg)
+![price-change1](images/price-change1.JPG)
+![price-change2](images/price-change2.JPG)
+![price-change3](images/price-change3.JPG)
 
 
 # Extensions
