@@ -1,8 +1,7 @@
  <h1> <center> Real Time Stock Monitor </center>  </h1>
  <h3> <center>using PIC32 and ESP8266 </center></h3>
 
-
-<h4> <center> David Valley (drv34) | Saelig Khattar (sak283) | Shrinidhi Kulkarni (ssk285) </center></h4>
+<h4> <center> David Valley (drv34) \cdot Saelig Khattar (sak283) \cdot Shrinidhi Kulkarni (ssk285) </center></h4>
 
 # Introduction
 In this project, we demonstrate a real-time stock monitor that uses the popular ESP8266 Wi-Fi module controlled by a PIC32.
@@ -24,20 +23,22 @@ The system works as a TCP server that connects to a Python Client and fetches re
 # Hardware Design 
 The hardware schematic for this project is shown in Fig. 2. The ESP module is connected to the PIC32 via the RX and TX lines. The chip also has +Vcc and GND, and the EN and CS pins that need to be connected to +Vcc to enable the chip and communicate. 
 
+The keyboard uses the MCP23017 port expander chip which gives the PIC 16 additional I/O pins. The keyboard is hooked up to the board as shown in the schematic. We use 330 ohm resistors to limit the current. The hardware setup was simple and did not take very long. We had a couple of mis-connections, but we fixed them early on. 
 <center>
 <img src="stockmonitor/images/schematic.png" width="250"></img>
+
+## ESP 8266 
+The ESP 8266 is a highly-capable, self contained SOC with integrated TCP/IP protocol stack that can give any microcontroller access to your WiFi network. It can be interfaced with almost any microcontroller and works at a baud rate of 115200 bps. It costs only about 7$ and in fact, has an onboard microcontroller with 2 GPIO pins. It contains a self-calibrated RF allowing it to work under all operating conditions, and requires no external RF parts. It is capable of hosting a TCP server or act as a client. Here, in our project, we use it as a TCP server. It can be configured easily using "AT" commands which are quite verbose and easy to understand. The documentation has been listed in the appendix. 
 <img src="stockmonitor/images/esp.jpg" width="250"></img>
 </center>
 
 # Software Design
-
 
 ## ESP8266 Wifi Module Setup
 
 To set up the ESP module, we had to send it various  AT commands before we began to use it in our application. To check if the module worked, simply sending it “AT” via serial (which can easily be done using Putty or the Arduino Serial Monitor) and receiving the string “OK” would verify its proper operation. Next, we reset the module, using “AT+RST” to ensure any previous settings would not interfere with our current setup. 
 
 Once we have ensured the module works and is reset, the next step was to connect the module to a Wifi Network. We used RedRover. To connect this module to RedRover, we first registered the device with Cornell IT, and then sent the AT command “AT+CWJAP_DEF=RedRover” to the module. Note, RedRover does not require a password to join the network, but the AT Command can accept a password argument. After it is connected, we can get the IP address of the module using “AT+CIFSR.” Next, we enable the ESP module to have multiple connections using “AT+CIPMUX=1” and configure the ESP module as a server using “AT+CIPSERVER=1”. After we sent this series of AT commands, the ESP module was ready to be used within our project.
-
 
 Here is a code snippet used for the configuration:
 
@@ -151,12 +152,16 @@ In specific reference to our own project, and in fact to many of the projects in
 # Appendices 
 ## Appendix A
 _The group approves this report for inclusion on the course website_
+
 _The group approves the video for inclusion on the course youtube channel_
 
 ## Appendix B: Code
-Link Github
+[Github Link](https://github.com/shrinidhi1994/stockmonitor)
 
 ## Appendix C: Schematics
+<img src="stockmonitor/images/schematic.png" width="250"></img>
+
+[ESP Schematics](https://cdn.sparkfun.com/datasheets/Wireless/WiFi/ESP8266ModuleV1.pdf)
 
 ## Appendix D: Cost Details
 
@@ -202,8 +207,7 @@ Added error handling for faulty or broken API Calls ||
 
 [Port Expander Reference Code (Additionally printLine2() is used from this code)](http://people.ece.cornell.edu/land/courses/ece4760/PIC32/Target_board/TFT_KEY_expander_shift_BRL4.c)
 
-Used some sample code for UART communication available under section “[Serial Console, Port Expander, DAC/DDS, TFT]”
-(http://people.ece.cornell.edu/land/courses/ece4760/PIC32/target_board.html)
+Used some sample code for UART communication available under section “[Serial Console, Port Expander, DAC/DDS, TFT]” (http://people.ece.cornell.edu/land/courses/ece4760/PIC32/target_board.html)
 
 [Python Sockets](https://docs.python.org/2/howto/sockets.html)
 
