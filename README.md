@@ -22,8 +22,8 @@ The system works as a TCP server that connects to a Python Client and fetches re
 
 # Hardware Design 
 
-![schematic](/images/schematic.png =600x400)
-![ESP-8266](/images/esp.jpg =480x480)
+![schematic](/images/schematic.png){ width=50% }
+![ESP-8266](/images/esp.jpg){ width=50% }
 
 # Software Design
 
