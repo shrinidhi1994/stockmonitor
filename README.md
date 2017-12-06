@@ -1,7 +1,7 @@
-<center> <h1>  Real Time Stock Monitor  <h1>
+ <h1> <center> Real Time Stock Monitor </center>  <h1>
 <h3> using PIC32 and ESP8266 </h3>
 
-### David Valley (drv34) | Saelig Khattar (sak283) | Shrinidhi Kulkarni (ssk285) </center>
+### David Valley (drv34) | Saelig Khattar (sak283) | Shrinidhi Kulkarni (ssk285) 
 
 # Introduction
 In this project, we demonstrate a real-time stock monitor that uses the popular ESP8266 Wi-Fi module controlled by a PIC32.
@@ -110,9 +110,9 @@ As to the actual technical details of our system, we finished with a pretty reli
 
 ![idle](images/idle.jpg)
 ![wait](images/wait.jpg)
-![price-change1](images/pricechange1.jpg)
-![price-change2](images/pricechange2.jpg)
-![price-change3](images/pricechange3.jpg)
+![price-change1](images/price-change1.jpg)
+![price-change2](images/price-change2.jpg)
+![price-change3](images/price-change3.jpg)
 
 
 # Extensions
@@ -144,8 +144,8 @@ In specific reference to our own project, and in fact to many of the projects in
 ___
 # Appendices 
 ## Appendix A
-_The group approves this report for inclusion on the course website
-The group approves the video for inclusion on the course youtube channel_
+_The group approves this report for inclusion on the course website_
+_The group approves the video for inclusion on the course youtube channel_
 
 ## Appendix B: Code
 Link Github
@@ -174,13 +174,13 @@ TOTAL|$52.95
 
 Saelig Khattar | David Valley | Shrinidhi Kulkarni
 ---------------|--------------|--------------------
-- Helped get ESP Wifi-module setup |Implemented Port Expander for keypad thread | Setup and configuration of the ESP module (which was basically reading the entire manual for the ESP chip)|Setup the communication protocol between the ESP and the python client and tested it
-- Helped Interface ESP chip with PIC32 chip (including the many tens of hours debugging)|Modified debouncing logic to scan new keypad and update ticker symbols|Tested communication extensively between the ESP and the Python client
-- Helped write Python script to make API calls and communicate with ESP module|Helped with hardware setup and wiring|Wrote the original python test script
-- Solved inability to read stock related responses from ESP|Helped identify Intrinio as our goto API data server, and how to format json calls|Integrated the keyboard and wifi communication threads on the PIC 
-- Designed the UI|Helped with UI design|Debugged minor issues during integration 
-- Structured code to make it easier to follow and less prone to error|Helped debug configuration thread|
-- Added error handling for faulty or broken API Calls ||
+Helped get ESP Wifi-module setup | Implemented Port Expander for keypad thread | Setup and configuration of the ESP module (which was basically reading the entire manual for the ESP chip)|Setup the communication protocol between the ESP and the python client and tested it
+Helped Interface ESP chip with PIC32 chip (including the many tens of hours debugging)| Modified debouncing logic to scan new keypad and update ticker symbols|Tested communication extensively between the ESP and the Python client
+Helped write Python script to make API calls and communicate with ESP module | Helped with hardware setup and wiring|Wrote the original python test script
+Solved inability to read stock related responses from ESP | Helped identify Intrinio as our goto API data server, and how to format json calls | Integrated the keyboard and wifi communication threads on the PIC 
+Designed the UI | Helped with UI design | Debugged minor issues during integration 
+Structured code to make it easier to follow and less prone to error | Helped debug configuration thread |
+Added error handling for faulty or broken API Calls ||
 
 ## Appendix F: References
 
