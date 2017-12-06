@@ -24,6 +24,7 @@ The system works as a TCP server that connects to a Python Client and fetches re
 
 ![schematic](/images/schematic.png = 250x)
 ![ESP-8266](/images/esp.jpg = 250x)
+<img src="/images/esp.jpg" width="200">
 
 # Software Design
 
