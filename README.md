@@ -1,5 +1,5 @@
- <header><h1> <center> Real Time Stock Monitor </center>  <h1>
- <h3> using PIC32 and ESP8266 </h3></header>
+<h1> <center> Real Time Stock Monitor </center>  </h1>
+ <h3> using PIC32 and ESP8266 </h3>
 
 ### David Valley (drv34) | Saelig Khattar (sak283) | Shrinidhi Kulkarni (ssk285) 
 
