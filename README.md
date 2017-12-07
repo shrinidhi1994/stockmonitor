@@ -168,7 +168,7 @@ _The group approves the video for inclusion on the course youtube channel_
 [Github Link](https://github.com/shrinidhi1994/stockmonitor)
 
 ## Appendix C: Schematics
-<img src="stockmonitor/images/schematic.png" width="250">
+<img src="/images/schematic.png" width="400">
 
 [ESP Schematics](https://cdn.sparkfun.com/datasheets/Wireless/WiFi/ESP8266ModuleV1.pdf)
 
