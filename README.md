@@ -192,7 +192,7 @@ Helped Interface ESP chip with PIC32 chip (including the many tens of hours debu
 Helped write Python script to make API calls and communicate with ESP module | Helped with hardware setup and wiring|Wrote the original python test script
 Solved inability to read stock related responses from ESP | Helped identify Intrinio as our goto API data server, and how to format JSON calls | Integrated the keyboard and wifi communication threads on the PIC 
 Designed the UI | Helped with UI design | Debugged minor issues during integration 
-Structured code to make it easier to follow and less prone to error | Helped debug configuration thread |
+Structured code to make it easier to follow and less prone to error | Helped debug configuration thread | Web development
 Added error handling for faulty or broken API Calls ||
 
 ## Appendix F: References
