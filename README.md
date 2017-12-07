@@ -53,10 +53,10 @@ sprintf(PT_send_buffer,"AT+CIFSR\r\n");
    strncpy(IP,PT_term_buffer+79,21);//get IP addr from the string AT+CIFSR returns
    tft_writeLine(IP);
    if(strstr(PT_term_buffer,"OK") != NULL){
-       //tft_writeLine(PT_term_buffer);
+       tft_writeLine(PT_term_buffer);
    }
    else if(strstr(PT_term_buffer,"FAIL") != NULL){
-       //tft_writeLine("IP Fail");
+       tft_writeLine("IP Fail");
    }
 ```
 
