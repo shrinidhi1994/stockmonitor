@@ -26,9 +26,11 @@ The hardware schematic for this project is shown in Fig. 2. The ESP module is co
 The keyboard uses the MCP23017 port expander chip which gives the PIC 16 additional I/O pins. The keyboard is hooked up to the board as shown in the schematic. We use 330 ohm resistors to limit the current. The hardware setup was simple and did not take very long. We had a couple of mis-connections, but we fixed them early on. 
 <center>
 <img src="stockmonitor/images/schematic.png" width="250">
+ </center>
 
 ## ESP 8266 
 The ESP 8266 is a highly-capable, self contained SOC with integrated TCP/IP protocol stack that can give any microcontroller access to your WiFi network. It can be interfaced with almost any microcontroller and works at a baud rate of 115200 bps. It costs only about 7$ and in fact, has an onboard microcontroller with 2 GPIO pins. It contains a self-calibrated RF allowing it to work under all operating conditions, and requires no external RF parts. It is capable of hosting a TCP server or act as a client. Here, in our project, we use it as a TCP server. It can be configured easily using "AT" commands which are quite verbose and easy to understand. The documentation has been listed in the appendix. 
+<center>
 <img src="stockmonitor/images/esp.jpg" width="250">
 </center>
 
@@ -59,8 +61,6 @@ sprintf(PT_send_buffer,"AT+CIFSR\r\n");
        tft_writeLine("IP Fail");
    }
 ```
-
-
 
 ## UART Communication Between ESP and PIC32
 You can program and communicate with the ESP8266 Wifi Module using AT Commands. There are numerous AT Commands available for this module, and they are provided in Instruction Set Manual which is linked in the Appendix. The PIC32 communicated with the ESP module using UART Serial communication. We would send strings (or rather, character arrays) from the PIC32 to the ESP module containing the AT Command and would await a response the receive line of the PIC.  The exact process for sending and receiving messages via UART is described in greater detail in the next paragraph.
@@ -162,7 +162,7 @@ _The group approves the video for inclusion on the course youtube channel_
 [Github Link](https://github.com/shrinidhi1994/stockmonitor)
 
 ## Appendix C: Schematics
-<img src="stockmonitor/images/schematic.png" width="250"></img>
+<img src="stockmonitor/images/schematic.png" width="250">
 
 [ESP Schematics](https://cdn.sparkfun.com/datasheets/Wireless/WiFi/ESP8266ModuleV1.pdf)
 
