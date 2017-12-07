@@ -17,21 +17,21 @@ In order to use the keyboard without rewriting most of the config file, we had t
 
 ## System Design
 The system works as a TCP server that connects to a Python Client and fetches real-time stock information for whichever company the user inputs. The input is a 12-digit keypad which works similar to a cellphone keyboard. The user can input the stock symbol of the company required and the system displays the stock price on the LCD monitor along with the corresponding arrows for increase / decrease in stock price relative to the last fetch. This price is updated in real-time.
-
-![program-flow](/images/flow_overview.png)
-
+<center>
+<img src="https://github.com/shrinidhi1994/stockmonitor/blob/master/images/flow_overview.png">
+</center>
 # Hardware Design 
 The hardware schematic for this project is shown in Fig. 2. The ESP module is connected to the PIC32 via the RX and TX lines. The chip also has +Vcc and GND, and the EN and CS pins that need to be connected to +Vcc to enable the chip and communicate. 
 
 The keyboard uses the MCP23017 port expander chip which gives the PIC 16 additional I/O pins. The keyboard is hooked up to the board as shown in the schematic. We use 330 ohm resistors to limit the current. The hardware setup was simple and did not take very long. We had a couple of mis-connections, but we fixed them early on. 
 <center>
-<img src="stockmonitor/images/schematic.png" width="250">
+<img src="https://github.com/shrinidhi1994/stockmonitor/blob/master/images/schematic.png" width="250">
  </center>
 
 ## ESP 8266 
 The ESP 8266 is a highly-capable, self contained SOC with integrated TCP/IP protocol stack that can give any microcontroller access to your WiFi network. It can be interfaced with almost any microcontroller and works at a baud rate of 115200 bps. It costs only about 7$ and in fact, has an onboard microcontroller with 2 GPIO pins. It contains a self-calibrated RF allowing it to work under all operating conditions, and requires no external RF parts. It is capable of hosting a TCP server or act as a client. Here, in our project, we use it as a TCP server. It can be configured easily using "AT" commands which are quite verbose and easy to understand. The documentation has been listed in the appendix. 
 <center>
-<img src="stockmonitor/images/esp.jpg" width="250">
+<img src="https://github.com/shrinidhi1994/stockmonitor/blob/master/images/esp.jpg" width="250">
 </center>
 
 # Software Design
@@ -73,9 +73,12 @@ The ESP communicated with our Python Client via a socket connection. The client 
 
 ## Communication from Python Client to Intrinio Web API
 Our Python client communicated with the Intrinio Web API using HTTP GET Requests. Based on the command it received from the ESP, the client would make the necessary GET request, format the response, and send it back to the ESP module. The GET requests were formatted based on the API requirements, and contained our API key . On an API call, Intrinio returned a JSON string with the necessary information. The client then parsed this JSON string to get the stock price. 
-
-![send-flow](/images/send-flow.png)
-![receive-flow](/images/receive-flow.png)
+<center>
+<img src="https://github.com/shrinidhi1994/stockmonitor/blob/master/images/send-flow.png" width="250">
+</center>
+<center>
+<img src="https://github.com/shrinidhi1994/stockmonitor/blob/master/images/receive-flow.png" width="250">
+</center>
  
 ## Threads
 ### Keyboard Thread
